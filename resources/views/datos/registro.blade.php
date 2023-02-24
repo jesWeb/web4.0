@@ -33,7 +33,7 @@
                 <div class="">
                     <div class="row">
                         <div class="col-auto">
-                            <select name="" id="estados">
+                            <select name="" id="estado">
                                 <option value="0">--Seleciona un estado --</option>
                             </select>
                             <hr>
