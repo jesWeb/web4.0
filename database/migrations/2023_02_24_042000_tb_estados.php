@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TbMunicipios extends Migration
+class TbEstados extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class TbMunicipios extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('municipios', function (Blueprint $table) {
+        //migracion estados 
+        Schema::create('tb_estados', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('cp');
+            $table->string('nombre');
             $table->timestamps();
         });
     }
@@ -30,5 +29,6 @@ class TbMunicipios extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('tb_estados');
     }
 }

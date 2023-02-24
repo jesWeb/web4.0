@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
-
+use App\Models\tb_estados;
+use App\Models\tb_municipios;
 
 class UsuariosController extends Controller
 {
@@ -83,7 +85,22 @@ class UsuariosController extends Controller
     {
         //
     }
-   
+    
+    // combos de dinamicos de estados
+    public function registro(){
+        $estados = tb_estados::all ();
+        return view("datos/registro")->with(['estados' => $estados]);
+    }
+    //javascript municipios 
+    public function js_municipios(Request $request){
+        $id_estado = $request ->get('id_estado');
+        $municipios = tb_municipios::where('id_estado',$id_estado) ->get();
+        return view("datos/js_municipios")->with(['municipios'=>$municipios]);
+
+    }
+
+
+
       
 }
 

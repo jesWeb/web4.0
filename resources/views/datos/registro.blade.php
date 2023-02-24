@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel|DSM-54</title>
     <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
-    <link rel="stylesheet" href="">
+    <link  href="{{asset('css/bootstrap.min.css')}}"  rel="stylesheet">
     <script>
         $(document).ready(function () {
             $("#estados").on('change', function () {
@@ -29,7 +29,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Formulrio de registro</h1>
+                <h1 class="bg-danger">Formulario de registro</h1>
                 <div class="">
                     <div class="row">
                         <div class="col-auto">
