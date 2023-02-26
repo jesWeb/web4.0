@@ -27,4 +27,4 @@ Route::get('practicas',[PracticadosController::class,'index'])->name('practicado
 //registro us
 Route::name('registro')->get('registro',[UsuariosController::class, 'registro']);
 //js municipiso
-Route::name('js_municipios')->get('js_municipios',[UsuariosController::class, 'js_municipios']);
+Route::name('js_municipios')->get('js_municipios',[UsuariosController::class,'js_municipios']);

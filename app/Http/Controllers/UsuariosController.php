@@ -88,14 +88,15 @@ class UsuariosController extends Controller
     
     // combos de dinamicos de estados
     public function registro(){
-        $estados = tb_estados::all ();
+        $estados = tb_estados::all();
         return view("datos/registro")->with(['estados' => $estados]);
     }
     //javascript municipios 
     public function js_municipios(Request $request){
         $id_estado = $request ->get('id_estado');
-        $municipios = tb_municipios::where('id_estado',$id_estado) ->get();
-        return view("datos/js_municipios")->with(['municipios'=>$municipios]);
+        $municipios = tb_municipios::where('id_estado',$id_estado)->get();
+        
+        return view("datos/js_municipios")->with(['municipios' => $municipios]);
 
     }
 
