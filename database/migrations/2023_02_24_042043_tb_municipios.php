@@ -21,7 +21,7 @@ class TbMunicipios extends Migration
             $table->unsignedBigInteger('id_estado');
             $table->timestamps();
             //foreign Key
-            $table->foreign('id_estado')->references('id_municipio')->on('tb_estados');
+            $table->foreign('id_estado')->references('id_estados')->on('tb_estados');
         });
     }
 

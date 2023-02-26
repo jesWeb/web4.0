@@ -15,7 +15,7 @@ class TbEstados extends Migration
     {
         //migracion estados 
         Schema::create('tb_estados', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_estados');
             $table->string('nombre');
             $table->timestamps();
         });

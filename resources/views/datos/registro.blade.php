@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laravel|DSM-54</title>
+    <title>Laravel | DSM-54</title>
     <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
    
     <script>
         $(document).ready(function(){
             $("#estados").on('change',function(){
                 var id_estado = $(this).find(":selected").val();
-                console.log('id_estado');
+                console.log(id_estado);
                 
                 if (id_estado == 0) {
                     $("#municipios").html('<option value="0">-- Selecciona un estado antes -- </option>');

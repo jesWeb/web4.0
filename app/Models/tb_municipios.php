@@ -16,9 +16,8 @@ class tb_municipios extends Model
         'nombre',
         'id_estado'
     ];
+
+    
    
-   // public function profile() {
-       // return $this->hasOne('App\Profile');
-     // }
 }
 
