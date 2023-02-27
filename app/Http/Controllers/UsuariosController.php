@@ -100,6 +100,17 @@ class UsuariosController extends Controller
 
     }
 
+    //-------------combos dinamicos-----------------//
+    public function form01(){
+
+        $estados = tb_estados::all();
+        return view("datos/formulario01")->with(['estados'=> $estados]);
+
+    } 
+
+    public function js_estudio(){
+        return view("datos/js_estudio");
+    }
 
 
       
