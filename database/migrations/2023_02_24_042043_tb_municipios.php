@@ -18,10 +18,10 @@ class TbMunicipios extends Migration
             $table->id('id_municipios');
             $table->string('cp');
             $table->string('nombre');
-            $table->unsignedBigInteger('id_estado');
+            $table->unsignedBigInteger('id_estados');
             $table->timestamps();
             //foreign Key
-            $table->foreign('id_estado')->references('id_estados')->on('tb_estados');
+            $table->foreign('id_estados')->references('id_estados')->on('tb_estados');
         });
     }
 

@@ -94,7 +94,7 @@ class UsuariosController extends Controller
     //javascript municipios 
     public function js_municipios(Request $request){
         $id_estado = $request ->get('id_estado');
-        $municipios = tb_municipios::where('id_estado',$id_estado)->get();
+        $municipios = tb_municipios::where('id_estados',$id_estado)->get();
         
         return view("datos/js_municipios")->with(['municipios' => $municipios]);
 
@@ -107,11 +107,14 @@ class UsuariosController extends Controller
         return view("datos/formulario01")->with(['estados'=> $estados]);
 
     } 
-
+    //
     public function js_estudio(){
         return view("datos/js_estudio");
     }
-
+    // 
+    public function js_work(){
+        return view("datos/js_work");
+    }
 
       
 }

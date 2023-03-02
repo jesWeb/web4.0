@@ -11,7 +11,7 @@
         $(document).ready(function(){
             $("#estados").on('change',function(){
                 var id_estado = $(this).find(":selected").val();
-                console.log('id_estado');
+                console.log('id_estados');
                 
                 if (id_estado == 0) {
                     $("#municipios").html('<option value="0">-- Selecciona un estado antes -- </option>');
@@ -29,10 +29,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="bg-danger">Formulario de registro</h1>
-                <div class="">
-                    <div class="row">
-                        <div class="col-auto">
+                <h1 class="mt-4 text-center">Formulario de registro</h1>
+                <div class="m-5">
+                    <div class="row  shadow-sm">
+                        <div class="col-12">
                             <select id="estados">
                                 <option value="0">--Seleciona un estado --</option>
                                 @foreach($estados as $estado)

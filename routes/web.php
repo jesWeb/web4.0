@@ -32,3 +32,5 @@ Route::name('js_municipios')->get('js_municipios',[UsuariosController::class,'js
 //form 01 campos adicionales 
 Route::name('form01')->get('form01',[UsuariosController::class,'form01']);
 Route::name('js_estudio')->get('js_estudio',[UsuariosController::class,'js_estudio']);
+//ruta de form de trabajo 
+Route::name('js_work')->get('js_work',[UsuariosController::class,'js_work']);

@@ -9,12 +9,12 @@ class tb_municipios extends Model
 {
     use HasFactory;
     protected $table = 'tb_municipios';
-    protected $primaryKey = 'id_municipio';
+    protected $primaryKey = 'id_municipios';
     protected $fillable = [
 
         'cp',
         'nombre',
-        'id_estado'
+        'id_estados'
     ];
 
     
