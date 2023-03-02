@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel | DSM-54</title>
     <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
-   
+    <link rel="stylesheet" href="{{asset('js/bootstrap.min.css')}}">
     <script>
         $(document).ready(function(){
             $("#estados").on('change',function(){
                 var id_estado = $(this).find(":selected").val();
-                console.log(id_estado);
+                console.log('id_estado');
                 
                 if (id_estado == 0) {
                     $("#municipios").html('<option value="0">-- Selecciona un estado antes -- </option>');
@@ -36,7 +36,7 @@
                             <select id="estados">
                                 <option value="0">--Seleciona un estado --</option>
                                 @foreach($estados as $estado)
-                                <option value="{{$estado->id_estado}}">{{$estado->nombre}}</option>
+                                <option value="{{$estado->id_estados}}">{{$estado->nombre}}</option>
                                 @endforeach
 
                             </select>

@@ -9,7 +9,7 @@ class tb_estados extends Model
 {
     use HasFactory;
     protected $table = 'tb_estados';
-    protected $primaryKey = 'id_estado';
+    protected $primaryKey = 'id_estados';
     protected $fillable = ['nombre'];
 
 }
