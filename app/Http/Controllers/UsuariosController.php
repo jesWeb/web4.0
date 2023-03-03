@@ -116,6 +116,11 @@ class UsuariosController extends Controller
         return view("datos/js_work");
     }
 
+    
+    //-------------busqueda-----------------//
+    public function admUsers(){
+        return view("datos/admUsers");  
+    }
       
 }
 

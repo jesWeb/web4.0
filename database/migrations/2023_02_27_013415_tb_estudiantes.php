@@ -16,17 +16,17 @@ class TbEstudiantes extends Migration
         //
         Schema::create('tb_estudiantes', function (Blueprint $table) {
             $table->id('id_estudiantes');
-            $table->double('Matricula')->unique();
+            $table->integer('Matricula')->unique();
             $table->string('Nombre')->unique();
             $table->string('ApellidoP')->unique();
-            $table->integer('FechaN');
-            $table->integer('Sexo');
-            $table->integer('direccion');
-            $table->integer('estudio');
-            $table->unsignedBigInteger('id_estado');
+            $table->double('FechaN');
+            $table->string('Sexo');
+            $table->string('direccion');
+            $table->string('estudio');
+            $table->unsignedBigInteger('id_estados');
             $table->timestamps();
             //foreign Key
-            $table->foreign('id_estado')->references('id_estados')->on('tb_estados');
+            $table->foreign('id_estados')->references('id_estados')->on('tb_estados');
         });
     }
     
